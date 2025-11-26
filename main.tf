@@ -30,11 +30,6 @@ resource "aws_default_security_group" "default" {
   }
 }
 
-resource "aws_vpc" "ok_vpc" {
-  cidr_block = "10.0.0.0/16"
-}
-
-
 ## Cria subnet privada na us-east-1a
 resource "aws_subnet" "private_subnet_1a" {
   vpc_id            = aws_vpc.minha_vpc.id
